@@ -85,5 +85,8 @@ The experiments show that learning rate scheduling significantly influences opti
 Overall, carefully designed learning rate schedules improve both convergence stability and model generalization.
 
 ---
+## Author
 
-## Repository Structure
+Keerthija Bontu  
+M.Eng. Information Technology (Specialization: Artificial Intelligence)  
+SRH University of Applied Sciences
