@@ -1,8 +1,8 @@
 # Cancer Detection in Histopathology Images using ResNet-34
 
-This project investigates the impact of different learning rate scheduling strategies when training a ResNet-34 convolutional neural network on the PatchCamelyon (PCam) histopathology dataset.
+This project investigates how different learning rate scheduling strategies affect the training behaviour and performance of a ResNet-34 convolutional neural network on the PatchCamelyon (PCam) histopathology dataset.
 
-The goal is to analyze how learning rate schedules affect training dynamics, convergence behaviour, and generalization performance in deep neural networks.
+The goal is to analyse how learning rate schedules influence optimization dynamics, convergence stability, and generalization performance in deep neural networks.
 
 ---
 
@@ -11,31 +11,31 @@ The goal is to analyze how learning rate schedules affect training dynamics, con
 The PatchCamelyon (PCam) dataset is a benchmark dataset for cancer detection in histopathology images.
 
 - Binary classification task: tumor vs non-tumor tissue
-- Extracted patches from whole-slide histopathology images
+- Image patches extracted from whole-slide histopathology images
 - Training, validation, and test splits provided by the dataset
 
-Dataset link:
+Dataset source:
 https://github.com/basveeling/pcam
 
 ---
 
 ## Model
 
-A **ResNet-34 convolutional neural network** was used for classification.
+A **ResNet-34 convolutional neural network** is used for classification.
 
-Architecture highlights:
+Key characteristics:
 
-- Deep residual network with skip connections
+- Deep residual architecture with skip connections
 - Final fully connected layer adapted for binary classification
-- Random weight initialization (no pretrained weights)
+- Random weight initialization
 
 ---
 
-## Training Setup
+## Training Configuration
 
-Training configuration:
+Training settings used for all experiments:
 
-- Optimizer: Stochastic Gradient Descent (SGD)
+- Optimizer: SGD
 - Momentum: 0.9
 - Weight decay: 5 × 10⁻⁴
 - Batch size: 64
@@ -48,45 +48,31 @@ Data augmentation:
 
 ---
 
-## Learning Rate Scheduling Strategies
+## Learning Rate Scheduling Experiment
 
-Five learning rate schedules were evaluated:
+Five learning rate scheduling strategies were evaluated:
 
-1. **Constant learning rate**
-2. **Step decay**
-3. **Cosine annealing**
-4. **Cosine annealing with warm restarts**
-5. **Linear warmup followed by cosine decay**
+- Constant learning rate
+- Step decay
+- Cosine annealing
+- Cosine annealing with warm restarts
+- Linear warmup followed by cosine decay
 
-All schedules were tested under the same training configuration to ensure a fair comparison.
-
----
-
-## Evaluation Metrics
-
-Model performance was evaluated using:
-
-- Accuracy
-- F1-score
-- ROC-AUC
-
-Each experiment was repeated with **three random seeds (42, 43, 44)** and results were averaged to account for stochastic variability.
+All models were trained using the same configuration and evaluated across **three random seeds (42, 43, 44)**.
 
 ---
 
-## Key Findings
+## Results
 
-The experiments show that learning rate scheduling significantly influences optimization behaviour and final performance.
+The following plot shows the comparison of validation accuracy across different learning rate schedules.
 
-- Simple schedules such as **constant learning rate** provide fast early convergence.
-- Smooth schedules like **cosine annealing** produce more stable training dynamics.
-- **Warmup + cosine decay** helps stabilize early training while maintaining strong generalization.
+![Validation Accuracy Comparison](validation_accuracy_comparison.png)
 
-Overall, carefully designed learning rate schedules improve both convergence stability and model generalization.
+The results indicate that learning rate scheduling significantly affects convergence behaviour and model generalization.
 
 ---
+
 ## Author
 
 Keerthija Bontu  
-M.Eng. Information Technology (Specialization: Artificial Intelligence)  
-SRH University of Applied Sciences
+M.Eng. Information Technology (Specialization: Artificial Intelligence)
