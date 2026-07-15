@@ -2,7 +2,7 @@
 
 This project is from my Deep Neural Networks coursework, where I worked on the PatchCamelyon (PCam) histopathology image classification task. The larger project was about cancer detection from medical image patches, and my individual part focused on something I found very important while training deep learning models: how the learning-rate schedule changes convergence, stability, and final generalisation.
 
-Instead of only training one CNN and reporting accuracy, I compared multiple learning-rate scheduling strategies on a ResNet-34 model and analysed their behaviour using validation metrics, learning curves, learning-rate evolution, and gradient norm distributions. I am keeping this repository as a documented coursework experiment because the original training environment is no longer available to me.
+Instead of only training one CNN and reporting accuracy, I compared multiple learning-rate scheduling strategies on a ResNet-34 model and analysed their behaviour using validation metrics, learning curves, learning-rate evolution, and gradient norm distributions.
 
 ## What I Worked On
 
@@ -117,11 +117,11 @@ This project helped me understand that deep learning performance is not only abo
 
 It also gave me practical experience with medical image classification, CNN training pipelines, PyTorch experiments, reproducibility, and result analysis.
 
-## Limitations
+## Project Status
 
-This was a university coursework project, and the original training environment is no longer available to me. Because of that, I am keeping this repository as a documented experiment with notebooks, results, and analysis rather than extending the model further.
+This repository keeps the notebooks, result plots, and analysis from my coursework contribution. I am using it mainly to document the experiment setup, the comparison between training schedules, and what I learned from the results.
 
-If I continued this project, I would add:
+Possible next analysis steps would be:
 
 - Confusion matrix analysis
 - Grad-CAM explainability for model predictions
