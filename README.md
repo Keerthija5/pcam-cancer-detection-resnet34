@@ -1,8 +1,8 @@
-# Training Optimisation for Histopathology Image Classification using ResNet-34
+# ResNet-34 Training Experiment for Histopathology Image Classification
 
 This project is from my Deep Neural Networks coursework, where I worked on the PatchCamelyon (PCam) histopathology image classification task. The larger project was about cancer detection from medical image patches, and my individual part focused on something I found very important while training deep learning models: how the learning-rate schedule changes convergence, stability, and final generalisation.
 
-Instead of only training one CNN and reporting accuracy, I compared multiple learning-rate scheduling strategies on a ResNet-34 model and analysed their behaviour using validation metrics, learning curves, learning-rate evolution, and gradient norm distributions.
+Instead of only training one CNN and reporting accuracy, I compared multiple learning-rate scheduling strategies on a ResNet-34 model and analysed their behaviour using validation metrics, learning curves, learning-rate evolution, and gradient norm distributions. I am keeping this repository as a documented coursework experiment because the original training environment is no longer available to me.
 
 ## What I Worked On
 
@@ -12,11 +12,11 @@ Instead of only training one CNN and reporting accuracy, I compared multiple lea
 - Analysed validation accuracy, F1-score, ROC-AUC, learning curves, and gradient norms
 - Studied how training schedules affect convergence speed, stability, and generalisation
 
-## Why This Project Matters
+## Why I Worked On This
 
 In medical image classification, getting a high accuracy number is not enough. The model also needs to train reliably and generalise well. During this project, I wanted to understand why two training runs with the same architecture can behave differently, and how choices such as cosine annealing, warm restarts, or warmup can influence the training process.
 
-This made the project more than a simple image classification task. It became an experiment on model training behaviour and deep learning optimisation.
+For me, this made the project more useful than a single image-classification run. It became a way to study model training behaviour and deep learning optimisation in a practical coursework setting.
 
 ## Dataset
 
@@ -83,7 +83,7 @@ The table below shows the mean and standard deviation across three random seeds.
 | Warm restarts | 0.8385 +/- 0.0085 | 0.8152 +/- 0.0118 | 0.9329 +/- 0.0015 | 0.7763 +/- 0.0040 | 0.7227 +/- 0.0066 | 0.8837 +/- 0.0059 |
 | Warmup + cosine | 0.8438 +/- 0.0031 | 0.8224 +/- 0.0044 | 0.9328 +/- 0.0037 | 0.7725 +/- 0.0023 | 0.7169 +/- 0.0034 | 0.8791 +/- 0.0067 |
 
-Cosine annealing gave the strongest validation performance in this experiment, while warmup and restart-based schedules showed more controlled training behaviour in later epochs.
+Cosine annealing gave the strongest validation performance in this experiment. Warmup and restart-based schedules were still useful to compare because they changed the training behaviour in later epochs.
 
 ## Result Visualisations
 
@@ -129,6 +129,6 @@ If I continued this project, I would add:
 - External validation on a separate histopathology dataset
 - A small inference script for testing new image patches
 
-## Skills Demonstrated
+## Concepts Used
 
-Deep Learning, Computer Vision, Medical Image Classification, CNNs, ResNet-34, PyTorch, PatchCamelyon, Data Augmentation, Learning-Rate Scheduling, SGD, Cosine Annealing, Warm Restarts, Warmup, Multi-Seed Evaluation, F1-score, ROC-AUC, Learning Curves, Gradient Norm Analysis, Experiment Design, Model Evaluation.
+Deep learning, computer vision, medical image classification, CNNs, ResNet-34, PyTorch, PatchCamelyon, data augmentation, learning-rate scheduling, SGD, cosine annealing, warm restarts, warmup, multi-seed evaluation, F1-score, ROC-AUC, learning curves, gradient norm analysis, and model evaluation.
